@@ -1,5 +1,6 @@
 import "./App.css"
 import { useState } from "react"
+import ColorFinder from "./components/colorfinder"
 
 function App() {
   const [ourText, setOurText] = useState("")
@@ -20,6 +21,7 @@ function App() {
         onChange={(e) => setOurText(e.target.value)}
       />
       <button onClick={() => speechHandler(msg)}>SPEAK</button>
+      <ColorFinder />
     </div>
   )
 }
