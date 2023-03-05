@@ -11,7 +11,7 @@ function ColorFinder() {
     const msg = new SpeechSynthesisUtterance()
     const [color, setColor] = useState("");
     const [colorName, setColorName] = useState("");
-    const [inputColour, setinputColour] = useState("");
+    const [inputColour, setInputColour] = useState("");
 
     const colorHandler = (e) => {
         setColor(e.target.value);
@@ -21,17 +21,24 @@ function ColorFinder() {
         msg.text = inputColour
         window.speechSynthesis.speak(msg)
       }
+
     
     const colorNameHandler = () => {
         fetch(`https://www.thecolorapi.com/id?rgb=${color}`)
         .then((res) => res.json())
         .then((data) => {
+            setInputColour(data.name.value);
             setColorName(data.name.value);
-            setinputColour(data.name.value);
+        })
+        .catch(console.log)
+        .finally(() => {
+            speechHandler(msg);
         });
-        speechHandler(msg)
-
+        
     };
+
+
+    
     
     return (
         <div className="App">
@@ -42,7 +49,7 @@ function ColorFinder() {
             placeholder="Enter RGB Value"
             onChange={colorHandler}
         />
-        <button onClick={colorNameHandler}>FIND COLOR</button>   
+        <button onClick={colorNameHandler} id="btn">FIND COLOR</button>   
         <h2>{colorName}</h2>
         </div>
     );
