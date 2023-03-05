@@ -1,8 +1,6 @@
 
 // using thecolorapi.com to get the color of the input rgb value */
-
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 
 
@@ -17,11 +15,10 @@ function ColorFinder() {
         setColor(e.target.value);
     };
 
-    const speechHandler = (msg) => {
+    const speechHandler = (inputColour) => {
         msg.text = inputColour
         window.speechSynthesis.speak(msg)
-      }
-
+    }
     
     const colorNameHandler = () => {
         fetch(`https://www.thecolorapi.com/id?rgb=${color}`)
@@ -29,17 +26,10 @@ function ColorFinder() {
         .then((data) => {
             setInputColour(data.name.value);
             setColorName(data.name.value);
+            speechHandler(data.name.value);
         })
-        .catch(console.log)
-        .finally(() => {
-            speechHandler(msg);
-        });
-        
     };
 
-
-    
-    
     return (
         <div className="App">
         <h1>Color Finder</h1>
