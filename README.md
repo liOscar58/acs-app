@@ -1,11 +1,12 @@
 ![Logo](https://i.imgur.com/Vp5rvKV.png)
-# Colour Eye
+# Accurate Color Sensor (ACS App)
 
 
-A colour recognition software for .....
+A portable fullstack solution to determining colors for the visually impaired
 
-Makes use of HTML, CSS, Javascript, React and React Speech Kit, and TheColorApi.
+Hardware Tools Used: Arduino Uno (no wireless/bluetooth) ESP32 Wifi (final board) Adafruit flora color sensor
 
+Software Tools Used: NodeJS ReactJS TheColorAPI ReactSpeechKit
 
 
 
@@ -32,6 +33,7 @@ Clone the project
   git clone https://github.com/liOscar58/colour-eye
 ```
 
+
 Go to the project directory
 
 ```bash
@@ -52,4 +54,6 @@ Start the server
 - [@Mustafa Ahmed](https://github.com/mustafa-ahmed1118)
 - [@Connor States](https://github.com/ConnorStates0)
 
+## DEVpost Submission
 
+https://devpost.com/software/accurate-color-sensor-acs-app?ref_content=contribution-prompt&ref_feature=engagement&ref_medium=email&utm_campaign=contribution-prompt&utm_content=contribution_reminder&utm_medium=email&utm_source=transactional#app-team
