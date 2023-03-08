@@ -55,5 +55,4 @@ Start the server
 - [@Connor States](https://github.com/ConnorStates0)
 
 ## DEVpost Submission
-
-https://devpost.com/software/accurate-color-sensor-acs-app?ref_content=contribution-prompt&ref_feature=engagement&ref_medium=email&utm_campaign=contribution-prompt&utm_content=contribution_reminder&utm_medium=email&utm_source=transactional#app-team
+[Accurate Color Sensor (ACS App)](https://devpost.com/software/accurate-color-sensor-acs-app?ref_content=contribution-prompt&ref_feature=engagement&ref_medium=email&utm_campaign=contribution-prompt&utm_content=contribution_reminder&utm_medium=email&utm_source=transactional#app-team)
